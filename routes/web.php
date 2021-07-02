@@ -20,7 +20,7 @@ Route::group(['middleware' => 'auth', 'auth.admin'], function () {
     Route::get('admin/dashboard', 'DashboardController@index')->name('admin.dashboard');
     Route::get('admin/inicio', 'DashboardController@getInicio')->name('admin.inicio');
    
-    Route::get('admin/logout', 'Auth\LoginController@logout');
+    Route::get('/admin/logout', 'Auth\LoginController@logout');
     Route::post('/admin/actualizar-usuario','UserController@update');
 
     // panel editar usuario
